@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Alex Morgan Photography</title>
+    <meta name="description" content="Get in touch with Alex Morgan for photography inquiries, exhibitions, and collaborations.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-container">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="index.html">Alex Morgan</a>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="exhibitions.html" class="nav-link">Exhibitions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link active">Contact</a>
+                    </li>
+                </ul>
+                <div class="nav-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <section class="page-header">
+                <div class="container">
+                    <h1 class="page-title">Contact</h1>
+                    <p class="page-subtitle">Let's connect and create something beautiful together</p>
+                </div>
+            </section>
+
+            <section class="contact-section">
+                <div class="container">
+                    <div class="contact-content">
+                        <div class="contact-info">
+                            <div class="contact-card">
+                                <h2>Alex Morgan</h2>
+                                <p class="contact-title">Contemporary Photographer</p>
+                                
+                                <div class="contact-details">
+                                    <div class="contact-item">
+                                        <h3>Studio Address</h3>
+                                        <p>
+                                            425 Creative Arts District<br>
+                                            Brooklyn, NY 11201<br>
+                                            United States
+                                        </p>
+                                    </div>
+
+                                    <div class="contact-item">
+                                        <h3>Email</h3>
+                                        <p>
+                                            <a href="mailto:hello@alexmorgan.photo">hello@alexmorgan.photo</a>
+                                        </p>
+                                    </div>
+
+                                    <div class="contact-item">
+                                        <h3>Phone</h3>
+                                        <p>
+                                            <a href="tel:+15551234567">+1 (555) 123-4567</a>
+                                        </p>
+                                    </div>
+
+                                    <div class="contact-item">
+                                        <h3>Studio Hours</h3>
+                                        <p>
+                                            Monday - Friday: 10:00 AM - 6:00 PM<br>
+                                            Saturday: By appointment<br>
+                                            Sunday: Closed
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-form-container">
+                            <h2>Send a Message</h2>
+                            <p>Interested in collaboration, commissions, or have questions about my work? I'd love to hear from you.</p>
+                            
+                            <form class="contact-form" id="contactForm" novalidate>
+                                <div class="form-group">
+                                    <label for="name">Full Name *</label>
+                                    <input type="text" id="name" name="name" required>
+                                    <span class="error-message" id="nameError"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" id="email" name="email" required>
+                                    <span class="error-message" id="emailError"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" name="phone">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="subject">Subject *</label>
+                                    <select id="subject" name="subject" required>
+                                        <option value="">Select a subject</option>
+                                        <option value="exhibition">Exhibition Inquiry</option>
+                                        <option value="commission">Commission Work</option>
+                                        <option value="collaboration">Collaboration</option>
+                                        <option value="print">Print Purchase</option>
+                                        <option value="general">General Inquiry</option>
+                                    </select>
+                                    <span class="error-message" id="subjectError"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="message">Message *</label>
+                                    <textarea id="message" name="message" rows="6" required placeholder="Tell me about your project or inquiry..."></textarea>
+                                    <span class="error-message" id="messageError"></span>
+                                </div>
+
+                                <div class="form-group checkbox-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" id="newsletter" name="newsletter">
+                                        <span class="checkmark"></span>
+                                        Subscribe to my newsletter for exhibition updates and new work announcements
+                                    </label>
+                                </div>
+
+                                <button type="submit" class="submit-btn">
+                                    <span class="btn-text">Send Message</span>
+                                    <span class="btn-loading">Sending...</span>
+                                </button>
+                            </form>
+
+                            <div class="form-success" id="formSuccess">
+                                <h3>Thank you for your message!</h3>
+                                <p>I'll get back to you within 24-48 hours.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2025 Alex Morgan Photography. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
