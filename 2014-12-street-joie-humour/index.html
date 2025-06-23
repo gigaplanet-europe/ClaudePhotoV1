@@ -1,0 +1,76 @@
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>https://gigaplanet.photos @ Emmanuel BRUNET</title>
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+
+    <!-- nanogallery2 -->
+    <link href="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/css/nanogallery2.min.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/jquery.nanogallery2.min.js"></script>
+</head>
+
+<body>
+
+<h3> Expo permanentes => <a href="https://gigaplanet.photos/expositions/">gigaplanet.photos</a>
+<br>Expo temporaire => ♥︎ 2014 12 street joie humour ♥︎</h3
+
+    <!-- ### position of the gallery ### -->
+    <div id="nanogallery2">gallery_made_with_nanogallery2</div>
+
+    <script>
+        jQuery(document).ready(function () {
+ 
+            jQuery("#nanogallery2").nanogallery2({
+                // ### gallery settings ### 
+                thumbnailHeight: 200,
+                thumbnailWidth: "auto",
+ 		    thumbnailBorderVertical: 1,
+        	    thumbnailBorderHorizontal: 1,
+		    thumbnailGutterWidth: 4,
+		    thumbnailGutterHeight: 4,
+		    //thumbnail ne pas afficher les miniatures dans la boite à lumiere
+		    viewerGallery: "none", // cacher les miniatures
+		    // affichage des boutons en haut à droite. J'ai supprimé => zoomButton
+			viewerTools:    {
+			topLeft:    'pageCounter',
+			topRight:   'playPauseButton, fullscreenButton, closeButton, downloadButton'
+			} ,
+		    //theme de la gallerie
+		    galleryTheme: { thumbnail: { borderColor: '#fff', borderRadius: '5px'}},
+		    //thumbnailHoverEffect2: 'scale120', //vignette loupe
+                // itemsBaseURL: 'image/',
+
+                // ### ma galerie ### 
+                items: [
+{ src: 'image/1040_0017078.JPG', srct: 'vignette/0017078.JPG' },
+{ src: 'image/1040_0048582.jpg', srct: 'vignette/0048582.jpg' },
+{ src: 'image/1070_0018502.JPG', srct: 'vignette/0018502.JPG' },
+{ src: 'image/1160_0012382.jpg', srct: 'vignette/0012382.jpg' },
+{ src: 'image/1168_0034970.jpg', srct: 'vignette/0034970.jpg' },
+{ src: 'image/1169_0040144.jpg', srct: 'vignette/0040144.jpg' },
+{ src: 'image/1200_0019156.jpg', srct: 'vignette/0019156.jpg' },
+{ src: 'image/1216_0034797.jpg', srct: 'vignette/0034797.jpg' },
+{ src: 'image/1228_0034798.jpg', srct: 'vignette/0034798.jpg' },
+{ src: 'image/1240_0027797.jpg', srct: 'vignette/0027797.jpg' },
+{ src: 'image/1252_0030399.JPG', srct: 'vignette/0030399.JPG' },
+{ src: 'image/1252_0030833.jpg', srct: 'vignette/0030833.jpg' },
+{ src: 'image/1590_0015944.JPG', srct: 'vignette/0015944.JPG' },
+{ src: 'image/1600_0015945.JPG', srct: 'vignette/0015945.JPG' },
+{ src: 'image/1610_0015946.JPG', srct: 'vignette/0015946.JPG' },
+{ src: 'image/1620_0015947.JPG', srct: 'vignette/0015947.JPG' },
+{ src: 'image/1800_0020336.jpg', srct: 'vignette/0020336.jpg' },
+{ src: 'image/2008_0030896.jpg', srct: 'vignette/0030896.jpg' },
+{ src: 'image/3940_0017934.JPG', srct: 'vignette/0017934.JPG' },
+{ src: 'image/4770_0018017.JPG', srct: 'vignette/0018017.JPG' },
+{ src: 'image/9410_0033094.jpg', srct: 'vignette/0033094.jpg' },]
+            });
+        });
+    </script>
+
+</body>
+
+</html>
