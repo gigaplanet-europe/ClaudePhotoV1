@@ -11,6 +11,7 @@ Galerie photo moderne et responsive créée avec Claude AI le 23 juin 2025.
 - Formulaire de contact interactif
 - Animations CSS
 - Compatible mobile
+- Espacement A4 sur desktop
 
 ## 🛠️ Technologies
 - HTML5
@@ -25,7 +26,8 @@ Galerie photo moderne et responsive créée avec Claude AI le 23 juin 2025.
 
 ## 🎨 Design
 - Palette de couleurs moderne (#6E6E6E, #8C9099, #ABAFB8, #C2C4CA)
-- Layout en format A4 centré
+- Layout en format A4 centré (900px)
+- Espacement de 15px en haut/bas sur desktop
 - Typographie moderne avec système de fonts
 - Animations fluides et interactions
 
