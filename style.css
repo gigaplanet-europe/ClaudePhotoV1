@@ -40,15 +40,18 @@ body {
     box-shadow: 0 2px 10px rgba(110, 110, 110, 0.1);
     position: fixed;
     top: 0;
-    left: 0;
-    right: 0;
+    /* Limitée à la largeur du page-container sur desktop */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 900px;
     z-index: 1000;
     transition: all 0.3s ease;
     border-bottom: 1px solid #D1D2D7;
 }
 
 .nav-container {
-    max-width: 900px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 0 40px;
     display: flex;
@@ -680,6 +683,10 @@ body {
     text-align: center;
     padding: 30px 0;
     border-top: 1px solid #D1D2D7;
+    /* Footer limité à la largeur du container sur desktop */
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
 }
 
 .footer p {
@@ -695,6 +702,13 @@ body {
         box-shadow: none;
     }
     
+    /* Navigation redevient full-width sur tablette */
+    .navbar {
+        left: 0;
+        transform: none;
+        max-width: 100%;
+    }
+    
     .nav-container {
         max-width: 100%;
         padding: 0 20px;
@@ -702,6 +716,11 @@ body {
     
     .container {
         padding: 0 20px;
+    }
+    
+    /* Footer redevient normal sur tablette */
+    .footer {
+        max-width: 100%;
     }
     
     .hero-content {
@@ -724,6 +743,13 @@ body {
         box-shadow: none;
     }
     
+    /* Navigation full-width sur mobile */
+    .navbar {
+        left: 0;
+        transform: none;
+        max-width: 100%;
+    }
+    
     .nav-container {
         max-width: 100%;
         padding: 0 15px;
@@ -731,6 +757,11 @@ body {
     
     .container {
         padding: 0 15px;
+    }
+    
+    /* Footer normal sur mobile */
+    .footer {
+        max-width: 100%;
     }
     
     .nav-menu {
