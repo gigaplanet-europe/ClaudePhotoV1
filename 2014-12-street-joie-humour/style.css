@@ -1,0 +1,360 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: #6E6E6E;
+    background-color: #CCCCCC;
+    font-size: 16px;
+}
+
+/* Page Container - A4 Style Layout */
+.page-container {
+    max-width: 900px;
+    margin: 15px auto;
+    background: white;
+    box-shadow: 0 8px 32px rgba(110, 110, 110, 0.2);
+    min-height: calc(100vh - 30px);
+    position: relative;
+}
+
+/* Container */
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* Navigation */
+.navbar {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(110, 110, 110, 0.1);
+    position: fixed;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 900px;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid #D1D2D7;
+}
+
+.nav-container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.nav-logo a {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #6E6E6E;
+    text-decoration: none;
+    letter-spacing: -0.5px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: #6E6E6E;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #8C9099;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #8C9099;
+    bottom: -5px;
+    left: 0;
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 2px;
+    background-color: #6E6E6E;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* Main Content */
+.main-content {
+    margin-top: 70px;
+    min-height: calc(100vh - 140px);
+    background: white;
+}
+
+/* Page Header */
+.page-header {
+    padding: 60px 0 40px;
+    border-bottom: 1px solid #D1D2D7;
+    background: white;
+}
+
+.page-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #6E6E6E;
+    text-align: center;
+}
+
+.page-subtitle {
+    font-size: 1.2rem;
+    color: #ABAFB8;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.expo-info {
+    background: #fafafa;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 600px;
+    border: 1px solid #D1D2D7;
+    text-align: center;
+}
+
+.expo-info h3 {
+    color: #6E6E6E;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.expo-info p {
+    color: #8C9099;
+    margin: 5px 0;
+}
+
+.expo-info a {
+    color: #8C9099;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.expo-info a:hover {
+    color: #6E6E6E;
+}
+
+/* Gallery Section */
+.gallery-section {
+    padding: 60px 0;
+    background: white;
+}
+
+.gallery-container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* Customisation nanogallery2 pour s'intégrer au design */
+#nanogallery2 {
+    margin: 20px 0;
+}
+
+/* Amélioration responsive nanogallery2 */
+.nGY2GThumbnailContainer {
+    margin: 5px !important;
+}
+
+/* Footer */
+.footer {
+    background: white;
+    color: #6E6E6E;
+    text-align: center;
+    padding: 30px 0;
+    border-top: 1px solid #D1D2D7;
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .page-container {
+        max-width: 100%;
+        margin: 0;
+        box-shadow: none;
+        min-height: 100vh;
+    }
+    
+    body {
+        background-color: #CCCCCC;
+    }
+    
+    .navbar {
+        left: 0;
+        top: 0;
+        transform: none;
+        max-width: 100%;
+    }
+    
+    .nav-container {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+    
+    .container,
+    .gallery-container {
+        padding: 0 20px;
+    }
+    
+    .footer {
+        max-width: 100%;
+    }
+    
+    .page-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .page-container {
+        max-width: 100%;
+        margin: 0;
+        box-shadow: none;
+    }
+    
+    .navbar {
+        left: 0;
+        top: 0;
+        transform: none;
+        max-width: 100%;
+    }
+    
+    .nav-container {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+    
+    .container,
+    .gallery-container {
+        padding: 0 15px;
+    }
+    
+    .footer {
+        max-width: 100%;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        padding: 30px 0;
+        gap: 1rem;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-toggle.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .nav-toggle.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .page-title {
+        font-size: 2rem;
+    }
+
+    .page-header {
+        padding: 40px 0 30px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .page-title {
+        font-size: 1.75rem;
+    }
+}
+
+/* Smooth Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.gallery-container {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Print Styles */
+@media print {
+    .navbar,
+    .footer {
+        display: none;
+    }
+    
+    .main-content {
+        margin-top: 0;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+}
