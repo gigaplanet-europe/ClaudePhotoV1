@@ -1,76 +1,151 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="fr">
 <head>
-<meta charset="utf-8">
-<title>https://gigaplanet.photos @ Emmanuel BRUNET</title>
-    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Street - Joie - Humour 2014 - Emmanuel Brunet Photography</title>
+    <meta name="description" content="Exposition photographique Street - Joie - Humour de décembre 2014 par Emmanuel Brunet. Collection de photographies de rue capturant la joie et l'humour du quotidien.">
+    
+    <!-- CSS autonome pour cette exposition -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- nanogallery2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/css/nanogallery2.min.css" rel="stylesheet" type="text/css">
+    
     <!-- jQuery -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
-
-    <!-- nanogallery2 -->
-    <link href="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/css/nanogallery2.min.css" rel="stylesheet" type="text/css">
+    
+    <!-- nanogallery2 JS -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/jquery.nanogallery2.min.js"></script>
 </head>
 
 <body>
+    <div class="page-container">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="../index.html">Emmanuel Brunet</a>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="../index.html" class="nav-link">A l'affiche</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../exhibitions.html" class="nav-link">Expositions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../contact.html" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <div class="nav-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
 
-<h3> Expo permanentes => <a href="https://gigaplanet.photos/expositions/">gigaplanet.photos</a>
-<br>Expo temporaire => ♥︎ 2014 12 street joie humour ♥︎</h3
+        <main class="main-content">
+            <section class="page-header">
+                <div class="container">
+                    <h1 class="page-title">Street - Joie - Humour</h1>
+                    <p class="page-subtitle">Collection photographique - Décembre 2014</p>
+                    
+                    <div class="expo-info">
+                        <h3>♥︎ Exposition temporaire ♥︎</h3>
+                        <p><strong>Thème :</strong> Photographies de rue capturant la joie et l'humour du quotidien</p>
+                        <p><strong>Période :</strong> Décembre 2014</p>
+                        <p><strong>Collection :</strong> 22 photographies</p>
+                        <p>
+                            <a href="https://gigaplanet.photos/expositions/" target="_blank" rel="noopener">
+                                Voir toutes les expositions sur gigaplanet.photos ↗
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </section>
 
-    <!-- ### position of the gallery ### -->
-    <div id="nanogallery2">gallery_made_with_nanogallery2</div>
+            <section class="gallery-section">
+                <div class="gallery-container">
+                    <!-- Gallery container for nanogallery2 -->
+                    <div id="nanogallery2">Chargement de la galerie...</div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2025 Emmanuel Brunet Photographe. Tous droits réservés.</p>
+            </div>
+        </footer>
+    </div>
 
     <script>
         jQuery(document).ready(function () {
- 
             jQuery("#nanogallery2").nanogallery2({
-                // ### gallery settings ### 
+                // Configuration de la galerie
                 thumbnailHeight: 200,
                 thumbnailWidth: "auto",
- 		    thumbnailBorderVertical: 1,
-        	    thumbnailBorderHorizontal: 1,
-		    thumbnailGutterWidth: 4,
-		    thumbnailGutterHeight: 4,
-		    //thumbnail ne pas afficher les miniatures dans la boite à lumiere
-		    viewerGallery: "none", // cacher les miniatures
-		    // affichage des boutons en haut à droite. J'ai supprimé => zoomButton
-			viewerTools:    {
-			topLeft:    'pageCounter',
-			topRight:   'playPauseButton, fullscreenButton, closeButton, downloadButton'
-			} ,
-		    //theme de la gallerie
-		    galleryTheme: { thumbnail: { borderColor: '#fff', borderRadius: '5px'}},
-		    //thumbnailHoverEffect2: 'scale120', //vignette loupe
-                // itemsBaseURL: 'image/',
-
-                // ### ma galerie ### 
+                thumbnailBorderVertical: 1,
+                thumbnailBorderHorizontal: 1,
+                thumbnailGutterWidth: 4,
+                thumbnailGutterHeight: 4,
+                
+                // Configuration du viewer
+                viewerGallery: "none", // Pas de miniatures dans la lightbox
+                viewerTools: {
+                    topLeft: 'pageCounter',
+                    topRight: 'playPauseButton, fullscreenButton, closeButton, downloadButton'
+                },
+                
+                // Thème adapté au design du site
+                galleryTheme: { 
+                    thumbnail: { 
+                        borderColor: '#D1D2D7', 
+                        borderRadius: '8px',
+                        background: '#fafafa'
+                    }
+                },
+                
+                // Collection d'images
                 items: [
-{ src: 'image/1040_0017078.JPG', srct: 'vignette/0017078.JPG' },
-{ src: 'image/1040_0048582.jpg', srct: 'vignette/0048582.jpg' },
-{ src: 'image/1070_0018502.JPG', srct: 'vignette/0018502.JPG' },
-{ src: 'image/1160_0012382.jpg', srct: 'vignette/0012382.jpg' },
-{ src: 'image/1168_0034970.jpg', srct: 'vignette/0034970.jpg' },
-{ src: 'image/1169_0040144.jpg', srct: 'vignette/0040144.jpg' },
-{ src: 'image/1200_0019156.jpg', srct: 'vignette/0019156.jpg' },
-{ src: 'image/1216_0034797.jpg', srct: 'vignette/0034797.jpg' },
-{ src: 'image/1228_0034798.jpg', srct: 'vignette/0034798.jpg' },
-{ src: 'image/1240_0027797.jpg', srct: 'vignette/0027797.jpg' },
-{ src: 'image/1252_0030399.JPG', srct: 'vignette/0030399.JPG' },
-{ src: 'image/1252_0030833.jpg', srct: 'vignette/0030833.jpg' },
-{ src: 'image/1590_0015944.JPG', srct: 'vignette/0015944.JPG' },
-{ src: 'image/1600_0015945.JPG', srct: 'vignette/0015945.JPG' },
-{ src: 'image/1610_0015946.JPG', srct: 'vignette/0015946.JPG' },
-{ src: 'image/1620_0015947.JPG', srct: 'vignette/0015947.JPG' },
-{ src: 'image/1800_0020336.jpg', srct: 'vignette/0020336.jpg' },
-{ src: 'image/2008_0030896.jpg', srct: 'vignette/0030896.jpg' },
-{ src: 'image/3940_0017934.JPG', srct: 'vignette/0017934.JPG' },
-{ src: 'image/4770_0018017.JPG', srct: 'vignette/0018017.JPG' },
-{ src: 'image/9410_0033094.jpg', srct: 'vignette/0033094.jpg' },]
+                    { src: 'image/1040_0017078.JPG', srct: 'vignette/0017078.JPG' },
+                    { src: 'image/1040_0048582.jpg', srct: 'vignette/0048582.jpg' },
+                    { src: 'image/1070_0018502.JPG', srct: 'vignette/0018502.JPG' },
+                    { src: 'image/1160_0012382.jpg', srct: 'vignette/0012382.jpg' },
+                    { src: 'image/1168_0034970.jpg', srct: 'vignette/0034970.jpg' },
+                    { src: 'image/1169_0040144.jpg', srct: 'vignette/0040144.jpg' },
+                    { src: 'image/1200_0019156.jpg', srct: 'vignette/0019156.jpg' },
+                    { src: 'image/1216_0034797.jpg', srct: 'vignette/0034797.jpg' },
+                    { src: 'image/1228_0034798.jpg', srct: 'vignette/0034798.jpg' },
+                    { src: 'image/1240_0027797.jpg', srct: 'vignette/0027797.jpg' },
+                    { src: 'image/1252_0030399.JPG', srct: 'vignette/0030399.JPG' },
+                    { src: 'image/1252_0030833.jpg', srct: 'vignette/0030833.jpg' },
+                    { src: 'image/1590_0015944.JPG', srct: 'vignette/0015944.JPG' },
+                    { src: 'image/1600_0015945.JPG', srct: 'vignette/0015945.JPG' },
+                    { src: 'image/1610_0015946.JPG', srct: 'vignette/0015946.JPG' },
+                    { src: 'image/1620_0015947.JPG', srct: 'vignette/0015947.JPG' },
+                    { src: 'image/1800_0020336.jpg', srct: 'vignette/0020336.jpg' },
+                    { src: 'image/2008_0030896.jpg', srct: 'vignette/0030896.jpg' },
+                    { src: 'image/3940_0017934.JPG', srct: 'vignette/0017934.JPG' },
+                    { src: 'image/4770_0018017.JPG', srct: 'vignette/0018017.JPG' },
+                    { src: 'image/9410_0033094.jpg', srct: 'vignette/0033094.jpg' }
+                ]
             });
         });
+
+        // Navigation mobile simple (pas besoin du script.js principal)
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navMenu = document.querySelector('.nav-menu');
+
+            if (mobileMenu) {
+                mobileMenu.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('active');
+                    navMenu.classList.toggle('active');
+                });
+            }
+        });
     </script>
-
 </body>
-
 </html>
