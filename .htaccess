@@ -1,0 +1,22 @@
+# Redirection des erreurs 404 vers la page d'accueil
+ErrorDocument 404 /index.html
+
+# Options pour améliorer les performances
+RewriteEngine On
+
+# Redirection exhibitions.html vers expositions.html
+RewriteRule ^exhibitions\.html$ /expositions.html [R=301,L]
+
+# Forcer HTTPS (optionnel)
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Cache des fichiers statiques (optionnel)
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/jpg "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+</IfModule>
