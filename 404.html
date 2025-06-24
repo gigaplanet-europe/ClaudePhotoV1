@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page non trouvée - Emmanuel Brunet Photography</title>
+    <meta http-equiv="refresh" content="3;url=index.html">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .error-container {
+            text-align: center;
+            padding: 100px 20px;
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .error-code {
+            font-size: 4rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .error-message {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #666;
+        }
+        .redirect-info {
+            font-size: 1rem;
+            color: #888;
+            margin-bottom: 20px;
+        }
+        .countdown {
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="index.html">Emmanuel Brunet</a>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">A l'affiche</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="expositions.html" class="nav-link">Expositions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <div class="error-container">
+                <div class="error-code">404</div>
+                <div class="error-message">
+                    Désolé, la page que vous cherchez n'existe pas.
+                </div>
+                <div class="redirect-info">
+                    Redirection automatique vers l'accueil dans <span id="countdown" class="countdown">3</span> secondes...
+                </div>
+                <a href="index.html" class="cta-button">Retour à l'accueil</a>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2025 Emmanuel Brunet Photographe. Tous droits réservés.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Redirection immédiate
+        setTimeout(function() {
+            window.location.href = 'index.html';
+        }, 3000);
+
+        // Compteur visuel
+        let count = 3;
+        const countdownElement = document.getElementById('countdown');
+        const countInterval = setInterval(function() {
+            count--;
+            if (count > 0) {
+                countdownElement.textContent = count;
+            } else {
+                clearInterval(countInterval);
+                countdownElement.textContent = '0';
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
