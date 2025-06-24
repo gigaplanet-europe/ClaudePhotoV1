@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://gigaplanet.photos/sitemap.xml
+
+# Indexation recommandée
+Allow: /index.html
+Allow: /expositions.html
+Allow: /contact.html
+Allow: /2014-12-street-joie-humour/
+
+# Assets autorisés
+Allow: /style.css
+Allow: /script.js
+Allow: /ExpoPictures/
+Allow: /2014-12-street-joie-humour/image/
+Allow: /2014-12-street-joie-humour/vignette/
+
+# Délai recommandé entre les requêtes (en secondes)
+Crawl-delay: 1
